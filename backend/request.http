@@ -1,0 +1,42 @@
+
+GET http://localhost:5000/users
+###
+
+GET  http://localhost:5000/users/ 
+###
+
+POST http://localhost:5000/register 
+content-type: application/json
+{
+   "id": "86758",
+    "name": "Jane Smith",
+    "password": "securepassword",
+    "email": "jane.smith@example.com"
+}
+###
+POST http://localhost:5000/login
+content-type: application/json
+{
+   "id": "736",
+   "name": "Lulu Ncube"
+   "email": "thando@mail.com",
+   "password": "123456"
+}
+###
+
+http://localhost:5000/bookings 
+###
+
+http://localhost:5000/users/1/bookings 
+###
+
+http://localhost:5000/listings 
+###
+
+# POST http://localhost:5000/users HTTP/1.1
+# content-type: application/json
+
+# {
+#     "name": "sample",
+#     "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+# }
