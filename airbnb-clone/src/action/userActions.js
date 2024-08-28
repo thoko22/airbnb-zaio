@@ -38,6 +38,6 @@ export const login = (email, password) => async (dispatch) => {
 };
 
 export const logout = () => async(dispatch) => {
-  localStorage.removeItem("userInfo"); // Remove user info from localStorage
+  localStorage.removeItem("userInfo");
   dispatch({ type: USER_LOGOUT });
 };

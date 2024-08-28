@@ -7,6 +7,7 @@ import { Avatar } from "@mui/material";
 import { openModal } from "../../action/modalAction";
 import Login from "../Login";
 import "./Header.css";
+import { logout } from "../../action/userActions";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -17,6 +18,10 @@ const Header = () => {
   const openModalHandle = () => {
     dispatch(openModal("open", <Login />));
   };
+  const logoutHandler = (e) => {
+    e.preventDefault();
+    dispatch(logout());
+  }
   return (
     <div className="header">
       <img
@@ -37,7 +42,7 @@ const Header = () => {
             {userInfo ? (
               <>
                 <span>Account</span>
-                <span>Logout</span>
+                <span  onClick={logoutHandler}>Logout</span>
               </>
             ) : (
               <>
